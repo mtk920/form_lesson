@@ -8,8 +8,116 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/7424872115.js" crossorigin="anonymous"></script> 
   </head>
-  <body>
-
+  <body class="wrapper">
+    <div clss="inner">
+      <div class="form">
+        <header>
+        </header>
+        <main>
+          <h1 class="main-title">アカウント作成</h1>
+          <div class="button_box">
+            <button type= "button" class="button__fb button" href>Facebookでスタート</button>
+            <button type= "button" class="button__google button" href>Googleでスタート</button>
+          </div>
+          <p class="caution-text">
+            タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。
+          </p>
+          <div class="line-account">
+            <p class="information-title">アカウント情報</p>
+          </div>
+          <div class="account__name row">
+            <div class="account__name--text">
+              <p class="input-title">名字<span class="must-check">※</span></p>
+              <input type="text" class="input-box" name="firstname">
+            </div>
+            <div class="account__name--text">
+              <p class="input-title">名前<span class="must-check">※</span></p>
+              <input type="text" class="input-box" name="lastname">
+            </div>
+          </div>
+          <div class="row">
+            <p class="input-title">性別</p>
+            <div class="clearfix">
+              <div class="sex-select">
+                <input type="radio" id="choice-sex" name="sex" value="man"
+                <label for="man">男性</label>
+              </div>
+              <div class="sex-select">
+                <input type="radio" id="choice-sex" name="sex" value="woman"
+                <label for="woman">女性</label>
+              </div>
+              <div class="sex-select">
+                <input type="radio" id="choice-sex" name="sex" value="another"          
+                <label for="another">その他</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <p class="input-title">出身</p>
+            <select name="出身" class="city-select">
+              <option>東京</option>
+              <option>千葉</option>
+              <option>埼玉</option>
+              <option>神奈川</option>
+            </select>
+          </div>
+          <div class="row">
+            <p class="input-title">Eメール<span class="must-check">※</span></p>
+            <input type="email" class="input-box" name="email" placeholder="ex) hoge@example.com">
+          </div>
+          <div class="row">
+            <p class="input-title">電話番号</p>
+            <input type="text" class="input-box" name="phonenumber" placeholder="ex) 09012345678">
+          </div>
+          <div class="row">
+            <p class="input-title">パスワード<span class="must-check">※</span></p>
+            <input type="password" class="input-box" name="password">
+          </div>
+          <div class="row">
+            <p class="input-title">パスワード（確認用）<span class="must-check">※</span></p>
+            <input type="password" class="input-box" name="password">
+          </div>
+          <div class="row">
+            <p class="input-title">希望コース</p>
+            <div class="corse-title">
+              <input type="checkbox" name="corse" value="frontend" class="corse__checkbox">
+              <label for="frontend">フロントエンド</label><br>
+            </div>
+            <div class="corse-title">
+              <input type="checkbox" name="corse" value="backend" class="corse__checkbox">
+              <label for="backend">バックエンド</label><br>
+            </div>
+            <div class="corse-title">
+              <input type="checkbox" name="corse" value="application" class="corse__checkbox">
+              <label for="application">アプリ</label>
+            </div>
+          </div>
+          <div class="row">
+            <p class="input-title">備考</p>
+            <textarea name="extra" class="extra-box">何かあればご記入ください</textarea>
+          </div>
+          <div class="row">
+            <button type="button" class="making-button button">アカウント作成</button>
+          </div>
+          <div>
+            <p class="agreement">
+              アカウントを作成することにより、
+              <a class="link-color" href>利用規約</a>と
+              <a class="link-color" href>プライバシーポリシー</a>
+              に同意するものとします。
+            </p>
+        </main>
+      </div>
+      <footer class="footer">
+        <p class="have-account" href>
+          すでにアカウントをお持ちですか？
+          <a class="link-color" href>ログイン</a><br>
+        </p>
+        <a class="res-mail link-color" href>認証メールが届きませんか？</a>
+      </footer>
+    </div>
+    
   </body>
 </html>
