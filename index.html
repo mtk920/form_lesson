@@ -18,8 +18,8 @@
         <main>
           <h1 class="main-title">アカウント作成</h1>
           <div class="button_box">            
-            <a href="" class="button__fb button" href>Facebookでスタート</a>
-            <a href="" class="button__google button" href>Googleでスタート</a>
+            <a href="" class="button__fb button">Facebookでスタート</a>
+            <a href="" class="button__google button">Googleでスタート</a>
           </div>
           <p class="caution-text">
             タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。
@@ -31,11 +31,11 @@
             <div class="account__name">
               <div class="account__name--text">
                 <p class="input-title">名字<span class="must-check">※</span></p>
-                <input type="text" class="input-box input-init" name="firstname">
+                <input type="text" class="input-box input-init" name="firstname" required>
               </div>
               <div class="account__name--text">
                 <p class="input-title">名前<span class="must-check">※</span></p>
-                <input type="text" class="input-box input-init" name="lastname">
+                <input type="text" class="input-box input-init" name="lastname" required>
               </div>
             </div>
             <div class="row">
@@ -55,30 +55,32 @@
                 </label>
               </div>
             </div>
-            <div class="row">
+            <div class="row city-inner">
               <p class="input-title">出身</p>
-              <select name="出身" class="city-select input-init">
-                <option>東京</option>
-                <option>千葉</option>
-                <option>埼玉</option>
-                <option>神奈川</option>
-              </select>
+              <div class="city-selectbox">
+                <select name="city" class="city-select input-init">
+                  <option value="Tokyo">東京</option>
+                  <option value="Chiba">千葉</option>
+                  <option value="Saitama">埼玉</option>
+                  <option value="Kanagawa">神奈川</option>
+                </select>
+              </div>
             </div>
             <div class="row">
               <p class="input-title">Eメール<span class="must-check">※</span></p>
-              <input type="email" class="input-box input-init" name="email" placeholder="ex) hoge@example.com">
+              <input type="email" class="input-box input-init" name="email" placeholder="ex) hoge@example.com" required>
             </div>
             <div class="row">
               <p class="input-title">電話番号</p>
-              <input type="text" class="input-box input-init" name="phonenumber" placeholder="ex) 09012345678">
+              <input type="tel" class="input-box input-init" name="phonenumber" placeholder="ex) 09012345678">
             </div>
             <div class="row">
               <p class="input-title">パスワード<span class="must-check">※</span></p>
-              <input type="password" class="input-box input-init" name="password">
+              <input type="password" class="input-box input-init" name="password" required>
             </div>
             <div class="row">
               <p class="input-title">パスワード（確認用）<span class="must-check">※</span></p>
-              <input type="password" class="input-box input-init" name="password">
+              <input type="password" class="input-box input-init" name="password" required>
             </div>
             <div class="row">
               <p class="input-title">希望コース</p>
@@ -100,13 +102,13 @@
               <textarea name="extra" class="extra-box input-init" placeholder="何かあればご記入ください"></textarea>
             </div>
             <div class="row">
-              <button type="button" class="making-button button input-init">アカウント作成</button>
+              <input type="submit" class="making-button button input-init" value="アカウント作成">
             </div>
             <div class="row">
               <p class="agreement">
                 アカウントを作成することにより、
-                <a class="link-color" href="">利用規約</a>と
-                <a class="link-color" href="">プライバシーポリシー</a>
+                <a class="link-color line-delete" href="">利用規約</a>と
+                <a class="link-color line-delete" href="">プライバシーポリシー</a>
                 に同意するものとします。
               </p>
           </div>
@@ -114,11 +116,11 @@
         
       </div>
       <footer class="footer">
-        <p class="have-account" href>
+        <p class="have-account">
           すでにアカウントをお持ちですか？
-          <a class="link-color" href>ログイン</a><br>
+          <a class="link-color" href="">ログイン</a><br>
         </p>
-        <a class="res-mail link-color" href>認証メールが届きませんか？</a>
+        <a class="res-mail link-color" href="">認証メールが届きませんか？</a>
       </footer>
     </div>
     

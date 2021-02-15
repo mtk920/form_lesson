@@ -181,6 +181,7 @@
   margin-left: 15px;
   cursor: pointer;
   float: left;
+  color: #545658;
 }
 
 .sex-select span {
@@ -223,8 +224,11 @@
   background-color: #01bfbd;
 }
 
-.city-select {
+.city-inner {
   width: 50%;
+}
+
+.city-select {
   box-sizing: border-box;
   height: 36px;
   margin-top: 5px;
@@ -234,6 +238,25 @@
   background-color: #fbfbfb;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
+  padding: 5px;
+  width: 100%;
+}
+
+.city-selectbox {
+  position: relative;
+}
+
+.city-selectbox:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
 }
 
 .corse-title {
@@ -286,6 +309,7 @@
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   box-sizing: border-box;
+  padding: 5px;
 }
 
 .making-button {
@@ -310,6 +334,10 @@
   line-height: 16px;
 }
 
+.line-delete {
+  text-decoration: none;
+}
+
 .link-color {
   color: #01a6a4;
   cursor: pointer;
@@ -317,8 +345,7 @@
 
 .link-color:hover {
   box-sizing: border-box;
-  border-bottom: 1px solid #ececec;
-  border-bottom-color: #01bfbd;
+  color: #01bfbd;
 }
 
 .footer {
@@ -326,6 +353,11 @@
   margin: 0 auto;
   text-align: center;
   margin-top: 32px;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid #ececec;
+  border-bottom-color: #01bfbd;
 }
 
 .have-account {
