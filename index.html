@@ -13,8 +13,6 @@
   <body class="wrapper">
     <div clss="inner">
       <div class="form">
-        <header>
-        </header>
         <main>
           <h1 class="main-title">アカウント作成</h1>
           <div class="button_box">            
@@ -28,82 +26,84 @@
             <div class="line-account">
               <p class="information-title">アカウント情報</p>
             </div>
-            <div class="account__name">
-              <div class="account__name--text">
-                <p class="input-title">名字<span class="must-check">※</span></p>
-                <input type="text" class="input-box input-init" name="firstname" required>
+            <form action="" method="POST">
+              <div class="account__name">
+                <div class="account__name--text">
+                  <p class="input-title">名字<span class="must-check">※</span></p>
+                  <input type="text" class="input-box input-init" name="firstname" required>
+                </div>
+                <div class="account__name--text">
+                  <p class="input-title">名前<span class="must-check">※</span></p>
+                  <input type="text" class="input-box input-init" name="lastname" required>
+                </div>
               </div>
-              <div class="account__name--text">
-                <p class="input-title">名前<span class="must-check">※</span></p>
-                <input type="text" class="input-box input-init" name="lastname" required>
+              <div class="row">
+                <p class="input-title">性別</p>
+                <div class="clearfix sex-selectbox">
+                  <label class="sex-select">
+                    <input class="radio" type="radio" name="sex" value="man">
+                    <span>男性</span>
+                  </label>
+                  <label class="sex-select">
+                    <input class="radio" type="radio" name="sex" value="woman">
+                    <span>女性</span>
+                  </label>
+                  <label class="sex-select">
+                    <input class="radio" type="radio" name="sex" value="another">          
+                    <span>その他</span>
+                  </label>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <p class="input-title">性別</p>
-              <div class="clearfix sex-selectbox">
-                <label class="sex-select">
-                  <input class="radio" type="radio" name="sex" value="man">
-                  <span>男性</span>
-                </label>
-                <label class="sex-select">
-                  <input class="radio" type="radio" name="sex" value="woman">
-                  <span>女性</span>
-                </label>
-                <label class="sex-select">
-                  <input class="radio" type="radio" name="sex" value="another">          
-                  <span>その他</span>
-                </label>
+              <div class="row city-inner">
+                <p class="input-title">出身</p>
+                <div class="city-selectbox">
+                  <select name="city" class="city-select input-init">
+                    <option value="Tokyo">東京</option>
+                    <option value="Chiba">千葉</option>
+                    <option value="Saitama">埼玉</option>
+                    <option value="Kanagawa">神奈川</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="row city-inner">
-              <p class="input-title">出身</p>
-              <div class="city-selectbox">
-                <select name="city" class="city-select input-init">
-                  <option value="Tokyo">東京</option>
-                  <option value="Chiba">千葉</option>
-                  <option value="Saitama">埼玉</option>
-                  <option value="Kanagawa">神奈川</option>
-                </select>
+              <div class="row">
+                <p class="input-title">Eメール<span class="must-check">※</span></p>
+                <input type="email" class="input-box input-init" name="email" placeholder="ex) hoge@example.com" required>
               </div>
-            </div>
-            <div class="row">
-              <p class="input-title">Eメール<span class="must-check">※</span></p>
-              <input type="email" class="input-box input-init" name="email" placeholder="ex) hoge@example.com" required>
-            </div>
-            <div class="row">
-              <p class="input-title">電話番号</p>
-              <input type="tel" class="input-box input-init" name="phonenumber" placeholder="ex) 09012345678">
-            </div>
-            <div class="row">
-              <p class="input-title">パスワード<span class="must-check">※</span></p>
-              <input type="password" class="input-box input-init" name="password" required>
-            </div>
-            <div class="row">
-              <p class="input-title">パスワード（確認用）<span class="must-check">※</span></p>
-              <input type="password" class="input-box input-init" name="password" required>
-            </div>
-            <div class="row">
-              <p class="input-title">希望コース</p>
-              <div class="corse-title">
-                <input class="radio" type="checkbox" name="corse" id="frontend">
-                <label for="frontend">フロントエンド</label><br>
+              <div class="row">
+                <p class="input-title">電話番号</p>
+                <input type="tel" class="input-box input-init" name="phonenumber" placeholder="ex) 09012345678">
               </div>
-              <div class="corse-title">
-                <input class="radio" type="checkbox" name="corse" id="backend">
-                <label for="backend">バックエンド</label><br>
+              <div class="row">
+                <p class="input-title">パスワード<span class="must-check">※</span></p>
+                <input type="password" class="input-box input-init" name="Password" required>
               </div>
-              <div class="corse-title">
-                <input class="radio" type="checkbox" name="corse" id="application">
-                <label for="application">アプリ</label>
+              <div class="row">
+                <p class="input-title">パスワード（確認用）<span class="must-check">※</span></p>
+                <input type="password" class="input-box input-init" name="PasswordCheck" required>
               </div>
-            </div>
-            <div class="row">
-              <p class="input-title">備考</p>
-              <textarea name="extra" class="extra-box input-init" placeholder="何かあればご記入ください"></textarea>
-            </div>
-            <div class="row">
-              <input type="submit" class="making-button button input-init" value="アカウント作成">
-            </div>
+              <div class="row">
+                <p class="input-title">希望コース</p>
+                <div class="corse-title">
+                  <input class="radio" type="checkbox" name="corse" id="choice1" value="frontend">
+                  <label for="frontend">フロントエンド</label><br>
+                </div>
+                <div class="corse-title">
+                  <input class="radio" type="checkbox" name="corse" id="choice2" value="backend">
+                  <label for="backend">バックエンド</label><br>
+                </div>
+                <div class="corse-title">
+                  <input class="radio" type="checkbox" name="corse" id="choice3"  value="application">
+                  <label for="application">アプリ</label>
+                </div>
+              </div>
+              <div class="row">
+                <p class="input-title">備考</p>
+                <textarea name="extra" class="extra-box input-init" placeholder="何かあればご記入ください"></textarea>
+              </div>
+              <div class="row">
+                <input type="submit" class="making-button button input-init" value="アカウント作成">
+              </div>
+            </form>  
             <div class="row">
               <p class="agreement">
                 アカウントを作成することにより、
